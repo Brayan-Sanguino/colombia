@@ -1,0 +1,1040 @@
+:root {
+    --amarillo: #FCD116;
+    --amarillo-oscuro: #D9AD00;
+    --azul: #003893;
+    --azul-oscuro: #00266B;
+    --rojo: #CE1126;
+    --rojo-oscuro: #9E0B1B;
+    --blanco: #FFFFFF;
+    --negro: #111111;
+    --gris-claro: #F4F6F8;
+    --gris: #666666;
+
+    --sombra: 0 8px 25px rgba(0, 0, 0, .15);
+}
+
+
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--gris-claro);
+    color: var(--negro);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-container {
+    width: min(1200px, 94%);
+    margin: auto;
+    padding: 25px 0 60px;
+}
+
+
+/* =========================
+   NAVBAR - COLOMBIA
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    min-height: 70px;
+
+    /* Azul colombiano */
+    background: var(--azul) !important;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, .25);
+
+    /* Línea amarilla */
+    border-bottom: 5px solid var(--amarillo);
+}
+
+.navbar .container-fluid {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 3%;
+}
+
+.navbar-brand {
+    color: var(--blanco) !important;
+    font-weight: 800;
+    font-size: 1.35rem;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-brand img {
+    object-fit: cover;
+    border-radius: 50%;
+
+    /* Borde amarillo */
+    border: 2px solid var(--amarillo);
+}
+
+.nav {
+    gap: 8px;
+}
+
+.nav-link {
+    color: var(--blanco) !important;
+    font-weight: 600;
+    padding: 9px 15px !important;
+    border-radius: 20px;
+    transition: .25s;
+}
+
+
+/* Efecto amarillo */
+
+.nav-link:hover,
+.nav-link.active {
+    background: var(--amarillo);
+    color: var(--azul) !important;
+}
+
+
+/* =========================
+   SLIDER
+========================= */
+
+#carouselExampleSlidesOnly {
+    width: 100%;
+    max-width: 1050px;
+    height: 360px;
+
+    margin: 15px auto 45px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    box-shadow: var(--sombra);
+
+    /* Borde amarillo */
+    border: 4px solid var(--amarillo);
+
+    background: var(--azul);
+}
+
+#carouselExampleSlidesOnly .carousel-inner,
+#carouselExampleSlidesOnly .carousel-item {
+    height: 100%;
+}
+
+#carouselExampleSlidesOnly .carousel-item img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* =========================
+   HISTORIA DE COLOMBIA
+========================= */
+
+#Historia {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto 45px !important;
+    background: var(--blanco);
+    border: 0;
+    /* Azul */
+    border-left: 7px solid var(--azul);
+    border-radius: 14px;
+    box-shadow: var(--sombra);
+    overflow: hidden;
+}
+
+#Historia .row {
+    align-items: stretch;
+}
+
+#Historia .col-md-4 {
+    min-height: 300px;
+}
+
+#Historia .col-md-4 img {
+    width: 100%;
+    height: 100%;
+
+    min-height: 300px;
+
+    object-fit: cover;
+}
+
+#Historia .card-body {
+    padding: 35px;
+}
+
+#Historia .card-title {
+    color: var(--azul);
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+#Historia .card-title::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 5px;
+    margin-top: 10px;
+    background: var(--amarillo);
+    border-radius: 10px;
+}
+
+#Historia .card-text {
+    color: var(--gris);
+
+    line-height: 1.8;
+
+    margin: 0;
+}
+
+
+/* =========================
+   LUGARES TURÍSTICOS
+========================= */
+
+#Lugares {
+    margin: 0 0 60px;
+}
+
+#Lugares .col {
+    display: flex;
+}
+
+#Lugares .card {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 14px;
+    overflow: hidden;
+    background: var(--blanco);
+    box-shadow: var(--sombra);
+    transition:
+        transform .3s,
+        box-shadow .3s;
+}
+
+#Lugares .card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .2);
+}
+
+#Lugares .card-img-top {
+    width: 100%;
+    height: 245px;
+    object-fit: cover;
+    object-position: center;
+}
+
+#Lugares .card-body {
+
+    padding: 22px;
+
+    /* Línea amarilla */
+    border-top: 5px solid var(--amarillo);
+}
+
+#Lugares .card-title {
+    margin: 0;
+    color: var(--azul);
+    font-size: 1.2rem;
+    font-weight: 750;
+}
+
+#Lugares .card-text {
+    color: var(--gris);
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   CULTURA COLOMBIANA
+========================= */
+
+#cultura h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--azul);
+    text-align: center;
+    margin: 0 0 30px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+
+/* Línea amarilla */
+
+#cultura h2::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 5px;
+    background: var(--amarillo);
+    margin: 10px auto 0;
+    border-radius: 10px;
+}
+
+
+/* =========================
+   CONTENEDOR CULTURA
+========================= */
+
+#Cultura {
+    margin: 0;
+    padding: 35px;
+    background: var(--blanco);
+    border-radius: 16px;
+    box-shadow: var(--sombra);
+    /* Línea superior azul */
+    border-top: 6px solid var(--azul);
+}
+
+#Cultura .col-4 {
+    padding-right: 25px;
+}
+
+#Cultura .col-8 {
+    padding-left: 25px;
+}
+
+#Cultura .col-8 {
+    padding-top: 45px;
+}
+
+
+/* =========================
+   LISTA DE CULTURA
+========================= */
+
+#Cultura .list-group {
+    gap: 8px;
+}
+
+#Cultura .list-group-item {
+    border: 0;
+    border-left: 4px solid transparent;
+    border-radius: 8px !important;
+    padding: 13px 15px;
+    font-weight: 600;
+    color: var(--negro);
+    background: var(--gris-claro);
+    transition: .25s;
+}
+
+
+/* Hover */
+
+#Cultura .list-group-item:hover {
+
+    background: var(--amarillo);
+    color: var(--azul);
+    border-left-color: var(--azul);
+}
+
+
+/* Elemento seleccionado */
+
+#Cultura .list-group-item.active {
+
+    background: var(--azul);
+    color: var(--blanco);
+    border-left-color: var(--amarillo);
+}
+
+
+/* =========================
+   CONTENIDO CULTURAL
+========================= */
+
+#Cultura .tab-content {
+
+    color: var(--gris);
+    line-height: 1.7;
+}
+
+#Cultura .tab-pane img {
+
+    width: 100%;
+    height: 270px;
+    margin-top: 18px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    /* Borde amarillo */
+    border: 4px solid var(--amarillo);
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, .12);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:991px) {
+
+    .navbar .container-fluid {
+        padding: 0 4%;
+    }
+
+    .nav {
+        gap: 0;
+    }
+
+    .nav-link {
+        padding: 8px 10px !important;
+        font-size: .92rem;
+    }
+
+    #carouselExampleSlidesOnly {
+        height: 320px;
+    }
+
+    #Historia .card-body {
+        padding: 28px;
+    }
+
+    #Lugares .card-img-top {
+        height: 220px;
+    }
+
+    #Cultura {
+        padding: 25px;
+    }
+
+    #Cultura .col-4,
+    #Cultura .col-8 {
+
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+
+@media(max-width:767px) {
+
+    .main-container {
+
+        width: 94%;
+
+        padding-top: 15px;
+    }
+
+
+    /* NAVBAR */
+
+    .navbar {
+
+        min-height: auto;
+
+        padding: 12px 0;
+    }
+
+    .navbar .container-fluid {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .navbar-brand {
+        justify-content: center;
+    }
+
+    .nav {
+
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav-link {
+
+        font-size: .82rem;
+        padding: 7px 9px !important;
+    }
+
+
+    /* SLIDER */
+
+    #carouselExampleSlidesOnly {
+        height: 220px;
+        margin: 10px auto 30px;
+        border-width: 3px;
+        border-radius: 12px;
+    }
+
+
+    /* HISTORIA */
+
+    #Historia {
+        border-left: 0;
+        border-top: 6px solid var(--azul);
+    }
+
+    #Historia .col-md-4 img {
+        height: 230px;
+        min-height: 230px;
+    }
+
+    #Historia .card-body {
+        padding: 22px;
+    }
+
+    #Historia .card-title {
+        font-size: 1.55rem;
+    }
+
+    #Historia .card-text {
+        font-size: .95rem;
+    }
+
+    /* LUGARES */
+
+    #Lugares .card-img-top {
+
+        height: 210px;
+    }
+
+    #Lugares .card-body {
+
+        padding: 18px;
+    }
+
+
+    /* CULTURA */
+
+    #Cultura {
+
+        padding: 18px;
+
+        border-top-width: 5px;
+    }
+
+    #Cultura .col-4,
+    #Cultura .col-8 {
+
+        width: 100%;
+
+        padding: 0;
+    }
+
+    #Cultura .col-4 {
+
+        margin-bottom: 20px;
+    }
+
+    #Cultura .list-group {
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 7px;
+    }
+
+    #Cultura .list-group-item {
+
+        font-size: .84rem;
+
+        padding: 11px 9px;
+    }
+
+    #Cultura .tab-pane img {
+
+        height: 220px;
+    }
+}
+
+
+/* =========================
+   CELULARES PEQUEÑOS
+========================= */
+
+@media(max-width:480px) {
+
+    .main-container {
+
+        width: 92%;
+    }
+
+    .nav {
+
+        gap: 2px;
+    }
+
+    .nav-link {
+
+        font-size: .75rem;
+
+        padding: 6px 7px !important;
+    }
+
+    /* SLIDER */
+
+    #carouselExampleSlidesOnly {
+
+        height: 180px;
+    }
+
+    /* HISTORIA */
+
+    #Historia .col-md-4 img {
+
+        height: 190px;
+
+        min-height: 190px;
+    }
+
+    #Historia .card-title {
+
+        font-size: 1.35rem;
+    }
+
+    #Historia .card-text {
+
+        font-size: .9rem;
+    }
+
+    /* LUGARES */
+
+    #Lugares .card-img-top {
+
+        height: 190px;
+    }
+
+    /* CULTURA */
+
+    #Cultura .list-group {
+
+        grid-template-columns: 1fr;
+    }
+
+    #Cultura .tab-pane img {
+
+        height: 190px;
+    }
+}
+
+#Lugares {
+    width: 100%;
+    margin: 0 0 60px;
+}
+
+.lugares-intro {
+    width: 100%;
+    min-height: 290px;
+    display: grid;
+    grid-template-columns: 42% 58%;
+    align-items: center;
+    background: var(--blanco);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    border-left: 8px solid var(--amarillo);
+    position: relative;
+}
+
+/* =========================
+   TEXTO IZQUIERDO
+========================= */
+
+.lugares-texto {
+    padding: 30px 35px 30px 32px;
+}
+
+.lugares-texto h2 {
+    margin: 0;
+    font-size: 2rem;
+    line-height: 1.15;
+    font-weight: 800;
+    color: var(--azul);
+}
+
+.lugares-texto h2 span {
+    color: var(--azul);
+}
+
+.lugares-texto h2 strong {
+    color: var(--rojo);
+    font-weight: 800;
+}
+
+.titulo-linea {
+    display: flex;
+    width: 160px;
+    height: 4px;
+    margin: 16px 0 22px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.titulo-linea span:nth-child(1) {
+    width: 33.33%;
+    background: var(--amarillo);
+}
+
+.titulo-linea span:nth-child(2) {
+    width: 33.33%;
+    background: var(--azul);
+}
+
+.titulo-linea span:nth-child(3) {
+    width: 33.33%;
+    background: var(--rojo);
+}
+
+.lugares-texto p {
+    max-width: 420px;
+    margin: 0 0 25px;
+    color: #64748b;
+    font-size: 1rem;
+    line-height: 1.55;
+}
+
+/* =========================
+   BOTÓN
+========================= */
+
+.btn-regiones {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+    padding: 11px 18px 11px 22px;
+    background: var(--amarillo);
+    color: var(--azul);
+    border-radius: 30px;
+    font-weight: 800;
+    font-size: .9rem;
+    transition: all .3s ease;
+}
+
+.btn-regiones span {
+    font-size: 1.35rem;
+    line-height: 1;
+    transition: transform .3s ease;
+}
+
+.btn-regiones:hover {
+    background: var(--azul);
+    color: var(--blanco);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 56, 147, .25);
+}
+
+.btn-regiones:hover span {
+    transform: translateX(5px);
+}
+
+/* =========================
+   GRID DE REGIONES
+========================= */
+
+.regiones-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding: 22px 20px 22px 0;
+}
+
+/* =========================
+   TARJETAS
+========================= */
+
+.region-card {
+    position: relative;
+    height: 118px;
+    border-radius: 11px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .12);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.region-card img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.region-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, .02),
+        rgba(0, 0, 0, .12)
+    );
+}
+
+.region-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 22px rgba(0, 0, 0, .2);
+}
+
+.region-card:hover img {
+    transform: scale(1.08);
+}
+
+/* =========================
+   INFORMACIÓN DE TARJETA
+========================= */
+
+.region-info {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    min-height: 38px;
+    padding: 7px 12px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--blanco);
+    font-weight: 800;
+    background: rgba(0, 0, 0, .45);
+}
+
+.region-icon {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    color: var(--blanco);
+}
+
+.region-name {
+    font-size: .9rem;
+    flex: 1;
+}
+
+.region-arrow {
+    font-size: 1.2rem;
+    transition: transform .3s ease;
+}
+
+.region-card:hover .region-arrow {
+    transform: translateX(5px);
+}
+
+/* =========================
+   COLORES DE CADA REGIÓN
+========================= */
+
+.region-caribe .region-info {
+    background: linear-gradient(90deg, #fcd116, #ffd83d);
+    color: var(--azul);
+}
+
+.region-andina .region-info {
+    background: linear-gradient(90deg, #174ea6, #2866c7);
+}
+
+.region-amazonia .region-info {
+    background: linear-gradient(90deg, #d90027, #ed163d);
+}
+
+.region-pacifico .region-info {
+    background: linear-gradient(90deg, #fcd116, #ffd83d);
+}
+
+.region-orinoquia .region-info {
+    background: linear-gradient(90deg, #174ea6, #2866c7);
+}
+
+.region-insular .region-info {
+    background: linear-gradient(90deg, #d90027, #ed163d);
+}
+
+/* =========================
+   TABLET - NUEVO BLOQUE
+========================= */
+
+@media (max-width: 991px) {
+
+    .lugares-intro {
+        grid-template-columns: 40% 60%;
+    }
+
+    .lugares-texto {
+        padding: 25px;
+    }
+
+    .lugares-texto h2 {
+        font-size: 1.7rem;
+    }
+
+    .lugares-texto p {
+        font-size: .92rem;
+    }
+
+    .regiones-grid {
+        gap: 9px;
+        padding-right: 15px;
+    }
+
+    .region-card {
+        height: 105px;
+    }
+
+    .region-name {
+        font-size: .8rem;
+    }
+}
+
+/* =========================
+   MÓVIL - NUEVO BLOQUE
+========================= */
+
+@media (max-width: 767px) {
+
+    #Lugares {
+        margin-bottom: 40px;
+    }
+
+    .lugares-intro {
+        display: block;
+        border-left: 0;
+        border-top: 6px solid var(--amarillo);
+        border-radius: 14px;
+    }
+
+    .lugares-texto {
+        padding: 25px 22px 20px;
+    }
+
+    .lugares-texto h2 {
+        font-size: 1.65rem;
+    }
+
+    .titulo-linea {
+        margin: 12px 0 18px;
+    }
+
+    .lugares-texto p {
+        font-size: .92rem;
+        margin-bottom: 20px;
+    }
+
+    .regiones-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 15px 18px;
+        gap: 10px;
+    }
+
+    .region-card {
+        height: 115px;
+        border-radius: 10px;
+    }
+
+    .region-info {
+        min-height: 36px;
+        padding: 6px 9px;
+    }
+
+    .region-name {
+        font-size: .82rem;
+    }
+
+    .region-icon {
+        font-size: 1rem;
+        width: 19px;
+    }
+
+    .region-arrow {
+        font-size: 1.05rem;
+    }
+}
+
+/* =========================
+   CELULARES PEQUEÑOS - NUEVO BLOQUE
+========================= */
+
+@media (max-width: 480px) {
+
+    .lugares-texto {
+        padding: 22px 18px 18px;
+    }
+
+    .lugares-texto h2 {
+        font-size: 1.45rem;
+    }
+
+    .lugares-texto p {
+        font-size: .88rem;
+        line-height: 1.5;
+    }
+
+    .btn-regiones {
+        width: 100%;
+        justify-content: center;
+        padding: 10px 15px;
+    }
+
+    .regiones-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        padding: 0 10px 12px;
+    }
+
+    .region-card {
+        height: 100px;
+    }
+
+    .region-info {
+        gap: 5px;
+        padding: 5px 7px;
+    }
+
+    .region-name {
+        font-size: .74rem;
+    }
+
+    .region-icon {
+        display: none;
+    }
+
+    .region-arrow {
+        font-size: .95rem;
+    }
+}

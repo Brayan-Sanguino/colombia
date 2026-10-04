@@ -1,0 +1,385 @@
+
+/* ===== COLOMBIA - REGIONES Y LUGARES TURÍSTICOS ===== */
+
+:root{
+ --amarillo:#FCD116;--amarillo-oscuro:#D9A900;
+ --azul:#003893;--azul-oscuro:#002B70;
+ --rojo:#CE1126;--rojo-oscuro:#A30D1E;
+ --blanco:#FFF;--negro:#171717;
+ --gris-fondo:#F3F5F7;--gris:#666;
+ --sombra:0 8px 25px rgba(0,0,0,.13);
+ --sombra-hover:0 15px 35px rgba(0,0,0,.20);
+}
+
+/* ===== GENERAL ===== */
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ margin:0;padding:0;font-family:Arial,Helvetica,sans-serif;
+ background:linear-gradient(180deg,#f8f9fa,var(--gris-fondo));
+ color:var(--negro)
+}
+img{max-width:100%;display:block}
+a{text-decoration:none}
+
+/* ===== NAVBAR ===== */
+
+header{
+    position:static;
+}
+
+.navbar{
+    min-height:72px;
+    background:var(--azul)!important;
+    box-shadow:0 4px 15px rgba(0,0,0,.20);
+    border-bottom:5px solid var(--amarillo);
+    padding:8px 0;
+}
+
+
+
+.navbar .container-fluid{
+ max-width:1200px;margin:auto;padding:0 3%
+}
+
+.navbar-brand{
+ color:var(--blanco)!important;font-size:1.4rem;font-weight:800;
+ display:flex;align-items:center;gap:10px;transition:.3s
+}
+
+.navbar-brand:hover{
+ color:var(--amarillo)!important;transform:translateY(-1px)
+}
+
+.navbar-brand img{
+ object-fit:cover;border-radius:5px;
+ border:2px solid var(--amarillo);
+ box-shadow:0 2px 8px rgba(0,0,0,.25)
+}
+
+.nav{gap:7px}
+
+.nav-link{
+ color:var(--blanco)!important;font-weight:600;
+ padding:9px 16px!important;border-radius:25px;
+ transition:background .25s,color .25s,transform .25s
+}
+
+.nav-link:hover{
+ background:var(--amarillo);
+ color:var(--azul)!important;
+ transform:translateY(-2px)
+}
+
+/* ===== CONTENEDOR ===== */
+
+.main-container{
+ width:min(1200px,94%);margin:auto;padding:35px 0 70px
+}
+
+/* ===== TEXTO INTRODUCTORIO ===== */
+
+.txt{
+ max-width:900px;margin:35px auto 45px;padding:25px 35px;
+ text-align:center;font-size:1.25rem;font-weight:600;line-height:1.8;
+ color:var(--azul);
+ background:linear-gradient(
+  135deg,
+  rgba(252,209,22,.18),
+  rgba(255,255,255,.95),
+  rgba(206,17,38,.08)
+ );
+ border-radius:18px;
+ border-left:6px solid var(--amarillo);
+ border-right:6px solid var(--rojo);
+ box-shadow:0 8px 25px rgba(0,56,147,.12);
+ position:relative;
+ animation:aparecerTexto 1s ease-out
+}
+
+.txt::after{
+ content:"";display:block;width:100px;height:5px;
+ margin:18px auto 0;border-radius:10px;
+ background:linear-gradient(
+  to right,
+  var(--amarillo) 0%,var(--amarillo) 33%,
+  var(--azul) 33%,var(--azul) 66%,
+  var(--rojo) 66%,var(--rojo) 100%
+ )
+}
+
+/* ===== REGIONES ===== */
+
+#Cultura{
+ margin:0;padding:25px;
+ background:var(--blanco);
+ border-radius:18px;
+ border-top:6px solid var(--azul);
+ border-bottom:5px solid var(--rojo);
+ box-shadow:0 10px 30px rgba(0,56,147,.15);
+ position:sticky;top:20px;z-index:100;
+ overflow:hidden
+}
+
+#Cultura::after{
+ content:"";position:absolute;left:0;right:0;bottom:0;
+ height:5px;background:var(--rojo)
+}
+
+/* ===== TÍTULO ===== */
+
+#cultura h2{
+ font-size:2rem;font-weight:800;color:var(--azul);
+ text-align:center;margin:0 0 25px;
+ position:relative;padding-bottom:10px
+}
+
+#cultura h2::after{
+ content:"";display:block;width:90px;height:5px;
+ margin:10px auto 0;border-radius:10px;
+ background:var(--amarillo)
+}
+
+/* ===== MENÚ DE REGIONES ===== */
+
+#Cultura .col-4{padding-right:25px}
+#Cultura .list-group{
+ gap:9px;border-radius:12px;overflow:hidden;
+ box-shadow:0 4px 12px rgba(0,0,0,.08)
+}
+
+#Cultura .list-group-item{
+ border:none;border-left:5px solid transparent;
+ border-radius:10px!important;padding:13px 15px;
+ font-weight:700;color:var(--azul);
+ background:#f8f9fa;
+ transition:all .3s ease;cursor:pointer
+}
+
+#Cultura .list-group-item:hover{
+ background:rgba(252,209,22,.25);
+ color:var(--azul);padding-left:22px
+}
+
+#Cultura .list-group-item.active{
+ background:var(--azul);color:var(--blanco);
+ border-left:6px solid var(--amarillo);
+ font-weight:800;
+ box-shadow:0 5px 12px rgba(0,0,0,.15)
+}
+
+/* ===== CONTENIDO ===== */
+
+#Cultura .col-8{
+ padding-left:25px;padding-top:10px
+}
+
+#Cultura .tab-content{
+ color:var(--gris);line-height:1.7;margin-top:25px
+}
+
+#Cultura .tab-pane{
+ padding-bottom:10px;
+ animation:aparecerRegion .5s ease
+}
+
+#Cultura .tab-pane p{
+ display:inline-block;
+ margin:15px 10px 10px 0;
+ padding:10px 15px;
+ color:var(--azul);
+ font-weight:700;
+ background:rgba(252,209,22,.15);
+ border-left:5px solid var(--amarillo);
+ border-radius:8px
+}
+
+/* ===== IMÁGENES ===== */
+
+#Cultura .tab-pane img{
+ width:100%;height:250px;
+ object-fit:cover;object-position:center;
+ border-radius:14px;border:4px solid var(--amarillo);
+ box-shadow:0 6px 18px rgba(0,0,0,.15);
+ transition:transform .4s ease,box-shadow .4s ease
+}
+
+#Cultura .tab-pane img:hover{
+ transform:scale(1.03);
+ box-shadow:var(--sombra-hover)
+}
+
+/* ===== ANIMACIONES ===== */
+
+@keyframes aparecerTexto{
+ from{opacity:0;transform:translateY(25px)}
+ to{opacity:1;transform:translateY(0)}
+}
+
+@keyframes aparecerRegion{
+ from{opacity:0;transform:translateY(15px)}
+ to{opacity:1;transform:translateY(0)}
+}
+
+/* ===== TABLET ===== */
+
+@media(max-width:991px){
+
+ .navbar .container-fluid{padding:0 4%}
+ .nav{gap:2px}
+ .nav-link{padding:8px 11px!important;font-size:.9rem}
+
+ .main-container{
+  width:94%;padding-top:25px
+ }
+
+ #Cultura{padding:25px}
+ #Cultura .col-4{padding-right:15px}
+ #Cultura .col-8{padding-left:15px}
+ #Cultura .tab-pane img{height:220px}
+}
+
+/* ===== MÓVIL ===== */
+
+@media(max-width:767px){
+
+ .navbar{padding:12px 0}
+
+ .navbar .container-fluid{
+  flex-direction:column;
+  align-items:stretch;
+  gap:12px
+ }
+
+ .navbar-brand{justify-content:center}
+
+ .nav{
+  justify-content:center;
+  flex-wrap:wrap
+ }
+
+ .nav-link{
+  font-size:.82rem;
+  padding:7px 10px!important
+ }
+
+ .main-container{
+  width:94%;padding:20px 0 50px
+ }
+
+ .txt{
+  margin:25px 20px 35px;
+  padding:20px 22px;
+  font-size:1.05rem;
+  line-height:1.7
+ }
+
+ #Cultura{
+  position:relative;
+  top:auto;
+  padding:20px;
+  border-top-width:6px
+ }
+
+ #Cultura .col-4,
+ #Cultura .col-8{
+  width:100%;padding:0
+ }
+
+ #cultura h2{
+  font-size:1.6rem;
+  margin-bottom:22px
+ }
+
+ #Cultura .col-4{margin-bottom:25px}
+
+ #Cultura .list-group{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px
+ }
+
+ #Cultura .list-group-item{
+  font-size:.85rem;
+  padding:12px 9px;
+  text-align:center;
+  border-left:0;
+  border-bottom:4px solid transparent
+ }
+
+ #Cultura .list-group-item:hover{
+  transform:translateY(-2px);
+  border-left:0;
+  border-bottom-color:var(--amarillo)
+ }
+
+ #Cultura .list-group-item.active{
+  border-left:0;
+  border-bottom-color:var(--amarillo)
+ }
+
+ #Cultura .col-8{padding-top:5px}
+
+ #Cultura .tab-pane p{
+  font-size:.95rem;
+  padding:9px 12px
+ }
+
+ #Cultura .tab-pane img{
+  height:220px;border-width:3px
+ }
+}
+
+/* ===== CELULARES PEQUEÑOS ===== */
+
+@media(max-width:480px){
+
+ .main-container{width:92%}
+
+ .navbar-brand{font-size:1.2rem}
+ .nav{gap:3px}
+
+ .nav-link{
+  font-size:.75rem;
+  padding:6px 8px!important
+ }
+
+ .txt{
+  margin:20px 12px 30px;
+  padding:18px 16px;
+  font-size:.95rem;
+  line-height:1.6;
+  border-left-width:4px;
+  border-right-width:4px
+ }
+
+ #Cultura{
+  margin:10px;
+  padding:15px;
+  border-radius:14px;
+  border-top-width:4px;
+  border-bottom-width:4px
+ }
+
+ #cultura h2{font-size:1.4rem}
+
+ #Cultura .list-group{
+  grid-template-columns:1fr
+ }
+
+ #Cultura .list-group-item{
+  font-size:.9rem;
+  padding:10px
+ }
+
+ #Cultura .tab-pane p{
+  font-size:.88rem;
+  margin-top:15px
+ }
+
+ #Cultura .tab-pane img{
+  height:190px;
+  border-radius:10px
+ }
+}
